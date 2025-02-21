@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const CommentSchema = new mongoose.Schema({
   comment: {
     type: String,
-    rrequired: true,
+    required: true, // Fix the typo here
   },
   likes: {
     type: Number,
@@ -18,5 +18,5 @@ const CommentSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-  
+
 module.exports = mongoose.models.Comment || mongoose.model("Comment", CommentSchema);
